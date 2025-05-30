@@ -63,20 +63,36 @@ pip install -r requirements.txt
 1. Acesse o [Google Cloud Console](https://console.cloud.google.com/)
 2. Crie um novo projeto ou selecione um existente
 3. Ative as APIs necessárias:
-   - Google Sheets API
-   - Google Drive API
-4. Crie uma conta de serviço:
+   - No menu lateral, vá em "APIs e Serviços" > "Biblioteca"
+   - Na barra de pesquisa, procure por "Google Sheets API"
+   - Clique no resultado e depois em "Ativar"
+   - Volte para a biblioteca e procure por "Google Drive API"
+   - Clique no resultado e depois em "Ativar"
+   - Aguarde alguns minutos para que as APIs sejam ativadas completamente
+4. Instale as bibliotecas do Google necessárias:
+```bash
+pip install google-api-python-client
+pip install google-auth-httplib2
+pip install google-auth-oauthlib
+```
+5. Crie uma conta de serviço:
    - Vá para "IAM & Admin" > "Service Accounts"
    - Clique em "Create Service Account"
    - Dê um nome e descrição
    - Conceda a role "Editor" (ou mais restritiva, se preferir)
-5. Crie uma chave para a conta de serviço:
+6. Crie uma chave para a conta de serviço:
    - Clique na conta de serviço criada
    - Vá para a aba "Keys"
    - Clique em "Add Key" > "Create new key"
    - Escolha o formato JSON
    - Baixe o arquivo e renomeie para `service-account.json`
-6. Coloque o arquivo `service-account.json` na raiz do projeto
+7. Coloque o arquivo `service-account.json` na raiz do projeto
+8. Compartilhe suas planilhas do Google Drive com o email da conta de serviço:
+   - Copie o email da conta de serviço (geralmente termina com @project-id.iam.gserviceaccount.com)
+   - Abra suas planilhas no Google Drive
+   - Clique em "Compartilhar"
+   - Cole o email da conta de serviço
+   - Dê permissão de "Editor"
 
 ## Configuração do Banco de Dados
 
@@ -224,8 +240,8 @@ date_cols = [
 
 ## Contribuição
 
-Contribuições são bem-vindas! Por favor, sinta-se à vontade para submeter um Pull Request.
+Embora eu não desejo modificações no github, sinta-se a vontade de modificar ele para o seu uso pessoal
 
 ## Licença
 
-Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para detalhes. 
+Esse projeto foi realizado para transferir dados de uma empresa que eu trabalho, mas sinta-se livre de usar
