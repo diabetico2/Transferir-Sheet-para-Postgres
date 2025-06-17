@@ -124,8 +124,8 @@ DB_CONFIG = {
 
 # ID da pasta do Google Drive onde estão as planilhas
 # Você pode encontrar o ID na URL da pasta no Google Drive
-# Exemplo: https://drive.google.com/drive/folders/1yLCyB6Czk0cJk5UicKFj0XQtSFYcQqkb
-# O ID seria: 1yLCyB6Czk0cJk5UicKFj0XQtSFYcQqkb
+# Exemplo: https://drive.google.com/drive/folders/abcdef
+# O ID seria: abcdef
 FOLDER_ID = 'seu_folder_id'
 
 # Nome da tabela e coluna identificadora
